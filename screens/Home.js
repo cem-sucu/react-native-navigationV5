@@ -5,6 +5,7 @@ const Home = ({ navigation }) => {
     const handlePress = () => {
         navigation.navigate("Portfolio");
     };
+
     return (
         <View style={styles.container}>
             <Text style={styles.text}>Home</Text>

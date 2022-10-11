@@ -3,7 +3,7 @@ import React from "react";
 
 const Portfolio = (props) => {
     const handlePress = () => {
-        props.navigation.pop();
+        props.navigation.navigate("Home");
     };
     return (
         <View style={styles.container}>
