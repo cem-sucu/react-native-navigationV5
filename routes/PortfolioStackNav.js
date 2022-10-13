@@ -1,7 +1,7 @@
 import { createStackNavigator } from "@react-navigation/stack";
 import Portfolio from "../screens/Portfolio";
 import { MaterialIcons } from "@expo/vector-icons";
-export const PortfolioStack = createStackNavigator();
+const PortfolioStack = createStackNavigator();
 
 export const PortfolioStackScreen = ({navigation}) => {
     return (
