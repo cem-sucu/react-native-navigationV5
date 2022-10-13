@@ -15,7 +15,7 @@ export const HomeStackScreen = ({ navigation }) => {
                         <MaterialIcons
                             name="menu"
                             size={24}
-                            color="black"
+                            color="blue"
                             onPress={() => navigation.openDrawer()}
                         />
                     ),

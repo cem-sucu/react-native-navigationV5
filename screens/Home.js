@@ -3,7 +3,7 @@ import React from "react";
 
 const Home = ({ navigation }) => {
     const handlePress = () => {
-        navigation.navigate("Portfolio");
+        navigation.navigate("Profil");
     };
 
     return (
