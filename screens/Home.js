@@ -2,13 +2,8 @@ import { Pressable, StyleSheet, Text, View } from "react-native";
 import React from "react";
 
 const Home = ({ navigation }) => {
-    const dataObj = {
-        name: "Selma",
-        age: 28,
-        color: "royalblue",
-    };
     const handlePress = () => {
-        navigation.navigate("Portfolio", dataObj);
+        navigation.navigate("Portfolio");
     };
 
     return (
@@ -30,8 +25,6 @@ const Home = ({ navigation }) => {
     );
 };
 
-export default Home;
-
 const styles = StyleSheet.create({
     container: {
         backgroundColor: "lightblue",
@@ -47,3 +40,5 @@ const styles = StyleSheet.create({
         color: "white",
     },
 });
+
+export default Home;
