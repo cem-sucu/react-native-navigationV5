@@ -2,8 +2,13 @@ import { Pressable, StyleSheet, Text, View } from "react-native";
 import React from "react";
 
 const Home = ({ navigation }) => {
+    const dataObj = {
+        name: "Selma",
+        age: 28,
+        color: "royalblue",
+    };
     const handlePress = () => {
-        navigation.navigate("Portfolio");
+        navigation.navigate("Portfolio", dataObj);
     };
 
     return (
