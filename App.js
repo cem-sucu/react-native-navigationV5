@@ -66,6 +66,12 @@ export default function App() {
                 <Stack.Screen
                     name="Portfolio"
                     component={Portfolio}
+                    options={({ route }) => ({
+                        title: route.params.name,
+                        headerStyle: {
+                            backgroundColor: route.params.color,
+                        },
+                    })}
                     /*  options={{ header: () => null }} // permet d'enlever le header, cela concernce uniquement la page Portfolio */
                     /*  options={{
                         headerStyle: {
