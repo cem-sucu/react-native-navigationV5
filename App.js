@@ -4,15 +4,13 @@ import { Drawer } from "./routes/DrawerNav";
 import { HomeStackScreen } from "./routes/HomeStackNav";
 import { PortfolioStackScreen } from "./routes/PortfolioStackNav";
 import { MaterialIcons } from "@expo/vector-icons";
+import CustomsDrawerContent from "./components/CustomsDrawerContent";
 
 export default function App() {
     return (
         <NavigationContainer>
             <Drawer.Navigator
-                drawerStyle={{
-                    backgroundColor: "#c6c",
-                    width: 240,
-                }}
+             drawerContent={(props)=> <CustomsDrawerContent {...props}/>}
             >
                 <Drawer.Screen
                     name="Home"
