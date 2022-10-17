@@ -2,17 +2,13 @@ import React from "react";
 import { Button, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 const Portfolio = ({ navigation, route }) => {
-
-
-
     const handlePress = () => {
         navigation.navigate("Home");
     };
 
-
     return (
         <View style={styles.container}>
-            <Text style={styles.text}>Portfolio</Text>
+            <Text style={styles.text}>Le Profil</Text>
         </View>
     );
 };

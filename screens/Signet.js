@@ -5,7 +5,7 @@ const Signets = () => {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.text}>Portfolio</Text>
+            <Text style={styles.text}>Signet</Text>
         </View>
     );
 };

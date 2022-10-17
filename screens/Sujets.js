@@ -2,10 +2,9 @@ import React from "react";
 import { Button, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 const Sujets = () => {
-
     return (
         <View style={styles.container}>
-            <Text style={styles.text}>Portfolio</Text>
+            <Text style={styles.text}>Sujet</Text>
         </View>
     );
 };
@@ -26,5 +25,4 @@ const styles = StyleSheet.create({
         padding: 12,
         color: "white",
     },
-  
 });

@@ -5,7 +5,7 @@ const Listes = () => {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.text}>Portfolio</Text>
+            <Text style={styles.text}>Liste</Text>
         </View>
     );
 };

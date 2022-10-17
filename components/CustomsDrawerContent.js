@@ -1,7 +1,15 @@
-import { DrawerContentScrollView } from "@react-navigation/drawer";
+import { DrawerContentScrollView, DrawerItem } from "@react-navigation/drawer";
 import React from "react";
 import { StyleSheet, View } from "react-native";
-import { Text, Avatar, Title, Caption, Paragraph } from "react-native-paper";
+import {
+    Text,
+    Avatar,
+    Title,
+    Caption,
+    Paragraph,
+    Drawer,
+} from "react-native-paper";
+import { MaterialIcons } from "@expo/vector-icons";
 
 const CustomsDrawerContent = (props) => {
     return (
@@ -47,6 +55,63 @@ const CustomsDrawerContent = (props) => {
                         </View>
                     </View>
                 </View>
+                <Drawer.Section style={styles.drawerSection}>
+                    <DrawerItem
+                        label="Profil"
+                        icon={({ color, size }) => (
+                            <MaterialIcons
+                                name="face"
+                                size={size}
+                                color={color}
+                            />
+                        )}
+                        onPress={() => props.navigation.navigate("Profil")}
+                    />
+                    <DrawerItem
+                        label="Listes"
+                        icon={({ color, size }) => (
+                            <MaterialIcons
+                                name="list-alt"
+                                size={size}
+                                color={color}
+                            />
+                        )}
+                        onPress={() => props.navigation.navigate("Listes")}
+                    />
+                    <DrawerItem
+                        label="Sujets"
+                        icon={({ color, size }) => (
+                            <MaterialIcons
+                                name="insert-comment"
+                                size={24}
+                                color="black"
+                            />
+                        )}
+                        onPress={() => props.navigation.navigate("Sujets")}
+                    />
+                    <DrawerItem
+                        label="Signets"
+                        icon={({ color, size }) => (
+                            <MaterialIcons
+                                name="bookmark-border"
+                                size={24}
+                                color="black"
+                            />
+                        )}
+                        onPress={() => props.navigation.navigate("Signets")}
+                    />
+                    <DrawerItem
+                        label="Moments"
+                        icon={({ color, size }) => (
+                            <MaterialIcons
+                                name="flash-on"
+                                size={24}
+                                color="black"
+                            />
+                        )}
+                        onPress={() => props.navigation.navigate("Moments")}
+                    />
+                </Drawer.Section>
             </DrawerContentScrollView>
         </View>
     );
@@ -89,6 +154,11 @@ const styles = StyleSheet.create({
     },
     paragraph: {
         fontWeight: "bold",
+    },
+    drawerSection: {
+        marginTop: 19,
+        borderTopWidth: 0.5,
+        borderTopColor: "#cccc",
     },
 });
 

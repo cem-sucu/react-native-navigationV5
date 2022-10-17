@@ -2,7 +2,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Home from "../screens/Home";
 import { MaterialIcons } from "@expo/vector-icons";
 const HomeStack = createStackNavigator();
-import Portfolio from "../screens/Portfolio";
+import Profil from "../screens/Profil";
 import Listes from "../screens/Listes";
 import Sujets from "../screens/Sujets";
 import Signets from "../screens/Signet";
@@ -30,7 +30,7 @@ export const HomeStackScreen = ({ navigation }) => {
                     title: "accueil",
                 }}
             />
-            <HomeStack.Screen name="Portfolio" component={Portfolio} />
+            <HomeStack.Screen name="Profil" component={Profil} />
             <HomeStack.Screen name="Listes" component={Listes} />
             <HomeStack.Screen name="Sujets" component={Sujets} />
             <HomeStack.Screen name="Signets" component={Signets} />
