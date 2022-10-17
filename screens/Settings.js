@@ -2,15 +2,12 @@ import React from "react";
 import { Button, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 const Settings = () => {
-
     return (
         <View style={styles.container}>
             <Text style={styles.text}>Paramètre</Text>
         </View>
     );
 };
-
-export default Settings;
 
 const styles = StyleSheet.create({
     container: {
@@ -26,5 +23,6 @@ const styles = StyleSheet.create({
         padding: 12,
         color: "white",
     },
-  
 });
+
+export default Settings;

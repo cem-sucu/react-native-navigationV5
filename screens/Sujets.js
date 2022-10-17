@@ -9,8 +9,6 @@ const Sujets = () => {
     );
 };
 
-export default Sujets;
-
 const styles = StyleSheet.create({
     container: {
         backgroundColor: "orange",
@@ -26,3 +24,5 @@ const styles = StyleSheet.create({
         color: "white",
     },
 });
+
+export default Sujets;

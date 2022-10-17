@@ -13,8 +13,6 @@ const Portfolio = ({ navigation, route }) => {
     );
 };
 
-export default Portfolio;
-
 const styles = StyleSheet.create({
     container: {
         backgroundColor: "orange",
@@ -38,3 +36,5 @@ const styles = StyleSheet.create({
         flexDirection: "row",
     },
 });
+
+export default Portfolio;

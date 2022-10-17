@@ -1,10 +1,9 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { Drawer } from "./routes/DrawerNav";
-import { HomeStackScreen } from "./routes/HomeStackNav";
-import { PortfolioStackScreen } from "./routes/PortfolioStackNav";
 import { MaterialIcons } from "@expo/vector-icons";
 import CustomsDrawerContent from "./components/CustomsDrawerContent";
+import BottomTabNav from "./routes/BottomTabNav";
 
 export default function App() {
     return (
@@ -14,7 +13,7 @@ export default function App() {
             >
                 <Drawer.Screen
                     name="Home"
-                    component={HomeStackScreen}
+                    component={BottomTabNav}
                     options={{
                         title: "Accueil",
                         headerShown: false,
@@ -27,11 +26,6 @@ export default function App() {
                         ),
                     }}
                 />
-                {/* <Drawer.Screen
-                    name="Profil"
-                    component={PortfolioStackScreen}
-                    options={{ title: "Ma page", headerShown: false }}
-                /> */}
             </Drawer.Navigator>
         </NavigationContainer>
     );

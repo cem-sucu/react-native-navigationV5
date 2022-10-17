@@ -11,19 +11,17 @@ import Settings from "../screens/Settings";
 
 const HomeStack = createStackNavigator();
 
-export const HomeStackScreen = ({ navigation }) => {
+const HomeStackScreen = ({ navigation }) => {
     return (
         <HomeStack.Navigator
             screenOptions={{
                 headerLeft: () => (
-                    <MaterialIcons style={styles.toggle}
+                    <MaterialIcons
+                        style={styles.toggle}
                         name="menu"
                         size={24}
                         color="blue"
                         onPress={() => navigation.openDrawer()}
-                        
-                        
-                        
                     />
                 ),
             }}
@@ -46,7 +44,9 @@ export const HomeStackScreen = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
-    toggle:{
+    toggle: {
         marginLeft: 20,
-    }
-})
+    },
+});
+
+export default HomeStackScreen;
