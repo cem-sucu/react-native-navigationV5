@@ -27,10 +27,10 @@ const HomeStackScreen = ({ navigation }) => {
             }}
         >
             <HomeStack.Screen
-                name="home"
+                name="homeb"
                 component={Home}
                 options={{
-                    title: "accueil",
+                    title: "Accueil",
                 }}
             />
             <HomeStack.Screen name="Profil" component={Profil} />

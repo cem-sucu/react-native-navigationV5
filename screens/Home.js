@@ -3,7 +3,7 @@ import { Pressable, StyleSheet, Text, View } from "react-native";
 
 const Home = ({ navigation }) => {
     const handlePress = () => {
-        navigation.navigate("Portfolio");
+        navigation.navigate("Profil");
     };
 
     return (
