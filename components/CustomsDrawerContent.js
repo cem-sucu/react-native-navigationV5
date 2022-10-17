@@ -1,5 +1,5 @@
 import { DrawerContentScrollView, DrawerItem } from "@react-navigation/drawer";
-import React from "react";
+import React, { useState } from "react";
 import { StyleSheet, View } from "react-native";
 import {
     Text,
@@ -8,10 +8,18 @@ import {
     Caption,
     Paragraph,
     Drawer,
+    TouchableRipple,
+    Switch,
 } from "react-native-paper";
 import { MaterialIcons } from "@expo/vector-icons";
 
 const CustomsDrawerContent = (props) => {
+    const [isDark, setIsDark] = useState(false);
+
+    const toggleDarktheme = () => {
+        setIsDark(!isDark);
+    };
+
     return (
         <View style={styles.container}>
             <DrawerContentScrollView {...props}>
@@ -54,65 +62,104 @@ const CustomsDrawerContent = (props) => {
                             </View>
                         </View>
                     </View>
+
+                    <Drawer.Section style={styles.drawerSection}>
+                        <DrawerItem
+                            label="Profil"
+                            icon={({ color, size }) => (
+                                <MaterialIcons
+                                    name="face"
+                                    size={size}
+                                    color={color}
+                                />
+                            )}
+                            onPress={() => props.navigation.navigate("Profil")}
+                        />
+                        <DrawerItem
+                            label="Listes"
+                            icon={({ color, size }) => (
+                                <MaterialIcons
+                                    name="list-alt"
+                                    size={size}
+                                    color={color}
+                                />
+                            )}
+                            onPress={() => props.navigation.navigate("Listes")}
+                        />
+                        <DrawerItem
+                            label="Sujets"
+                            icon={({ color, size }) => (
+                                <MaterialIcons
+                                    name="insert-comment"
+                                    size={size}
+                                    color={color}
+                                />
+                            )}
+                            onPress={() => props.navigation.navigate("Sujets")}
+                        />
+                        <DrawerItem
+                            label="Signets"
+                            icon={({ color, size }) => (
+                                <MaterialIcons
+                                    name="bookmark-border"
+                                    size={size}
+                                    color={color}
+                                />
+                            )}
+                            onPress={() => props.navigation.navigate("Signets")}
+                        />
+                        <DrawerItem
+                            label="Moments"
+                            icon={({ color, size }) => (
+                                <MaterialIcons
+                                    name="flash-on"
+                                    size={size}
+                                    color={color}
+                                />
+                            )}
+                            onPress={() => props.navigation.navigate("Moments")}
+                        />
+                    </Drawer.Section>
+                    <Drawer.Section title="Réglages">
+                        <DrawerItem
+                            label="Paramètres de confidentialité"
+                            icon={({ color, size }) => (
+                                <MaterialIcons
+                                    name="settings"
+                                    size={size}
+                                    color={color}
+                                />
+                            )}
+                            onPress={() =>
+                                props.navigation.navigate("Settings")
+                            }
+                        />
+
+                        <TouchableRipple onPress={() => toggleDarktheme()}>
+                            <View style={styles.settings}>
+                                <Text>Mode sombre</Text>
+                                <View pointerEvents="none">
+                                    <Switch value={isDark} />
+                                </View>
+                            </View>
+                        </TouchableRipple>
+                    </Drawer.Section>
                 </View>
-                <Drawer.Section style={styles.drawerSection}>
-                    <DrawerItem
-                        label="Profil"
-                        icon={({ color, size }) => (
-                            <MaterialIcons
-                                name="face"
-                                size={size}
-                                color={color}
-                            />
-                        )}
-                        onPress={() => props.navigation.navigate("Profil")}
-                    />
-                    <DrawerItem
-                        label="Listes"
-                        icon={({ color, size }) => (
-                            <MaterialIcons
-                                name="list-alt"
-                                size={size}
-                                color={color}
-                            />
-                        )}
-                        onPress={() => props.navigation.navigate("Listes")}
-                    />
-                    <DrawerItem
-                        label="Sujets"
-                        icon={({ color, size }) => (
-                            <MaterialIcons
-                                name="insert-comment"
-                                size={24}
-                                color="black"
-                            />
-                        )}
-                        onPress={() => props.navigation.navigate("Sujets")}
-                    />
-                    <DrawerItem
-                        label="Signets"
-                        icon={({ color, size }) => (
-                            <MaterialIcons
-                                name="bookmark-border"
-                                size={24}
-                                color="black"
-                            />
-                        )}
-                        onPress={() => props.navigation.navigate("Signets")}
-                    />
-                    <DrawerItem
-                        label="Moments"
-                        icon={({ color, size }) => (
-                            <MaterialIcons
-                                name="flash-on"
-                                size={24}
-                                color="black"
-                            />
-                        )}
-                        onPress={() => props.navigation.navigate("Moments")}
-                    />
-                </Drawer.Section>
             </DrawerContentScrollView>
+
+            <Drawer.Section style={styles.logOutSection}>
+                <DrawerItem
+                    label="Paramètres de confidentialité"
+                    icon={({ color, size }) => (
+                        <MaterialIcons
+                            name="logout"
+                            size={size}
+                            color={color}
+                        />
+                    )}
+                    onPress={() => alert("Déconnecter")}
+                />
+            </Drawer.Section>
         </View>
     );
 };
@@ -157,6 +204,17 @@ const styles = StyleSheet.create({
     },
     drawerSection: {
         marginTop: 19,
+        borderTopWidth: 0.5,
+        borderTopColor: "#cccc",
+    },
+    settings: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        paddingVertical: 15,
+        paddingHorizontal: 15,
+    },
+    logOutSection: {
+        marginBottom: 20,
         borderTopWidth: 0.5,
         borderTopColor: "#cccc",
     },

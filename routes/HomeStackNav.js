@@ -1,24 +1,29 @@
 import { createStackNavigator } from "@react-navigation/stack";
-import Home from "../screens/Home";
 import { MaterialIcons } from "@expo/vector-icons";
-const HomeStack = createStackNavigator();
+import { StyleSheet } from "react-native";
+import Home from "../screens/Home";
 import Profil from "../screens/Profil";
 import Listes from "../screens/Listes";
 import Sujets from "../screens/Sujets";
 import Signets from "../screens/Signet";
 import Moments from "../screens/Moments";
+import Settings from "../screens/Settings";
 
+const HomeStack = createStackNavigator();
 
 export const HomeStackScreen = ({ navigation }) => {
     return (
         <HomeStack.Navigator
             screenOptions={{
                 headerLeft: () => (
-                    <MaterialIcons
+                    <MaterialIcons style={styles.toggle}
                         name="menu"
                         size={24}
                         color="blue"
                         onPress={() => navigation.openDrawer()}
+                        
+                        
+                        
                     />
                 ),
             }}
@@ -35,7 +40,13 @@ export const HomeStackScreen = ({ navigation }) => {
             <HomeStack.Screen name="Sujets" component={Sujets} />
             <HomeStack.Screen name="Signets" component={Signets} />
             <HomeStack.Screen name="Moments" component={Moments} />
-            
+            <HomeStack.Screen name="Settings" component={Settings} />
         </HomeStack.Navigator>
     );
 };
+
+const styles = StyleSheet.create({
+    toggle:{
+        marginLeft: 20,
+    }
+})
