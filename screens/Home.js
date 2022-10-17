@@ -1,9 +1,10 @@
-import { Pressable, StyleSheet, Text, View } from "react-native";
 import React from "react";
+import { Pressable, StyleSheet, Text, View } from "react-native";
+
 
 const Home = ({ navigation }) => {
     const handlePress = () => {
-        navigation.navigate("Profil");
+        navigation.navigate("Portfolio");
     };
 
     return (

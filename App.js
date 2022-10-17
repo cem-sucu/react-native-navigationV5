@@ -29,11 +29,11 @@ export default function App() {
                         ),
                     }}
                 />
-                <Drawer.Screen
+                {/* <Drawer.Screen
                     name="Profil"
                     component={PortfolioStackScreen}
                     options={{ title: "Ma page", headerShown: false }}
-                />
+                /> */}
             </Drawer.Navigator>
         </NavigationContainer>
     );
