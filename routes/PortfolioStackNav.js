@@ -1,16 +1,16 @@
 import { createStackNavigator } from "@react-navigation/stack";
-import Portfolio from "../screens/Portfolio";
+import Profil from "../screens/Profil";
 import { MaterialIcons } from "@expo/vector-icons";
 const PortfolioStack = createStackNavigator();
 
-export const PortfolioStackScreen = ({navigation}) => {
+const PortfolioStackScreen = ({ navigation }) => {
     return (
         <PortfolioStack.Navigator>
             <PortfolioStack.Screen
                 name="Home"
-                component={Portfolio}
+                component={Profil}
                 options={{
-                    title: "Portfolio",
+                    title: "Profil",
                     headerLeft: () => (
                         <MaterialIcons
                             name="menu"
@@ -24,3 +24,5 @@ export const PortfolioStackScreen = ({navigation}) => {
         </PortfolioStack.Navigator>
     );
 };
+
+export default PortfolioStackScreen;
