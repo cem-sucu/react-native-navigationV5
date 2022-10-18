@@ -5,6 +5,7 @@ import { MaterialIcons } from "@expo/vector-icons";
 import CustomsDrawerContent from "./components/CustomsDrawerContent";
 import BottomTabNav from "./routes/BottomTabNav";
 
+
 export default function App() {
     return (
         <NavigationContainer>
