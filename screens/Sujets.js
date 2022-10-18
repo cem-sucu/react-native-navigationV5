@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import Color from "../constants/Color";
 
 const Sujets = () => {
     return (
@@ -11,7 +12,7 @@ const Sujets = () => {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: "orange",
+        backgroundColor: Color.bgScreens,
         flex: 1,
         justifyContent: "center",
         alignItems: "center",

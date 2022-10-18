@@ -1,4 +1,5 @@
 import React from "react";
+import Color from "../constants/Color";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 
 const Home = ({ navigation }) => {
@@ -8,7 +9,7 @@ const Home = ({ navigation }) => {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.text}>Home</Text>
+            <Text style={styles.text}>Gözat</Text>
             <Pressable
                 style={({ pressed }) => [
                     {
@@ -27,7 +28,7 @@ const Home = ({ navigation }) => {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: "lightblue",
+        backgroundColor: Color.bgScreens,
         flex: 1,
         justifyContent: "center",
         alignItems: "center",

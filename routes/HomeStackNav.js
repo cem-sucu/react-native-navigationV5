@@ -8,6 +8,8 @@ import Sujets from "../screens/Sujets";
 import Signets from "../screens/Signet";
 import Moments from "../screens/Moments";
 import Settings from "../screens/Settings";
+import Discover from "../screens/Discover";
+import Gozat from "../screens/Gozat";
 
 const HomeStack = createStackNavigator();
 
@@ -24,6 +26,7 @@ const HomeStackScreen = ({ navigation }) => {
                         onPress={() => navigation.openDrawer()}
                     />
                 ),
+                headerBackTitleStyle: "red",
             }}
         >
             <HomeStack.Screen
@@ -39,6 +42,8 @@ const HomeStackScreen = ({ navigation }) => {
             <HomeStack.Screen name="Signets" component={Signets} />
             <HomeStack.Screen name="Moments" component={Moments} />
             <HomeStack.Screen name="Settings" component={Settings} />
+            <HomeStack.Screen name="Discover" component={Discover} />
+            <HomeStack.Screen name="gozat" component={Gozat} />
         </HomeStack.Navigator>
     );
 };

@@ -2,14 +2,10 @@ import React from "react";
 import { Button, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import Color from "../constants/Color";
 
-const Portfolio = ({ navigation, route }) => {
-    const handlePress = () => {
-        navigation.navigate("Home");
-    };
-
+const Gozat = () => {
     return (
         <View style={styles.container}>
-            <Text style={styles.text}>Le Profil</Text>
+            <Text style={styles.text}>Gozat</Text>
         </View>
     );
 };
@@ -28,14 +24,6 @@ const styles = StyleSheet.create({
         padding: 12,
         color: "white",
     },
-    btnText: {
-        color: "white",
-        fontSize: 19,
-        paddingBottom: 9,
-    },
-    btnContainer: {
-        flexDirection: "row",
-    },
 });
 
-export default Portfolio;
+export default Gozat;
